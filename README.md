@@ -33,8 +33,11 @@ Please find an existing model which can be used to recognize and annotate cats i
 Your goal is to swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.
 
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullA.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative1.jpg "Negative Image")
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullB.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative2.jpg "Negative Image")
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullC.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative3.jpg "Negative Image")
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullD.jpg "Skull")
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullE.jpg "Skull")
 ![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullF.jpg "Skull")
