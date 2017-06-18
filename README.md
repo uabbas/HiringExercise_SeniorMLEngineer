@@ -11,38 +11,42 @@ Congratulations on your candidacy to the CMIST Division (Center for Medical Inno
 4.	**Organizational Fit** - evaluated via group interview 
 
 This repository details item three – a take-home exercise which aims to evaluate your ability to deliver.  With this, we are observing three major things:
-1.	Scientific and Technical Correctness
-2.	Communication and Presentation
-3.	Self-Management
-
-### The Exercise
-
-Please create a model which can be used to recognize and annotate cats in photos.  You are welcome to use any training set available online to train the model.  Please deliver two scripts: one to train your model and one which applies the model onto our test set of images (test_set.zip) and draws bounding boxes around cats on the test set as such:
-
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/catbb.png "Alf with Lucky")
-
-Please deliver back these two scripts (and everything else referenced) as well as a corresponding set of images with the bounding boxes.  *Do not* submit any large training sets, rather include scripts to acquire them before starting the training.  Your scripts should be all-encompassing, including pipeline steps and acquisition of any training sets.  If you need a setup script, that can also be included.
-
-Your submission should be via Github.  You can make your repo public or private (in which case, add https://github.com/CMIST as a collaborator.)  Answers to the discussions questions should also be delivered via the repository as either Markdown, Plaintext, Jupyter Notebook, or PDF.
-
-The exercise can be done in any language (though we prefer python) as long as the submission can be successfully executed.  Please do not use paid platforms like MATLAB.  If you are completely agnostic, you can use our in-house standard: TensorFlow + Keras or Caffe2.  We plan to execute this on an AWS EC2 G-series machine.  To this point, please detail your selected environment, machine learning / computer vision platform and any other setup steps so we can re-train and re-test your model from scratch.
-
-There is no need to re-create the wheel here, use any and all open-source or vendor-provided scripts that you can.  Ensure to include them so the submission is all-encompassing.  **Do not** include anything irrelevant to the goal of this exercise, we want the minimal set of work which achieves the goal and nothing more.
-
-### Discussion Questions
-1.	What network/model did you select, and why
-2.	Describe your pipeline and pre-processing steps
-3.	What steps did you take to get the best accuracy
-4.	How long did your training and inference take, how could you make these faster?
-5.	If you had more time, how would you expand on this submission?
+1.  Ability to find and use existing solutions
+2.	Technical Correctness
+3.	Communication and Presentation
+4.	Self-Management
 
 ### Rationale for this Exercise
 Without working with confidential medical images, this exercise closely resembles types of work we do in the group, specifically:
-* Dealing with heterogeneous in-the-wild samples (various sizes, various aspect ratios.)  The same pre-processing script (using “tiling” which I had hinted at before) should be able to handle everything.
-* Dealing with 0,1,1+ cases per image
-* Dealing with multiple file formats (easily handled via PIL)
+* Find existing solutions we can build upon, try to not "re-create the wheel"
+* Dealing with heterogeneous in-the-wild samples (various sizes, various aspect ratios.)  
+* Execute object detection with 0,1,1+ cases per image
 * Communicating ideas
 * Managing own efforts 
+
+This exercise is geared towards Position # 4285 (Developer: Machine Learning and Computer Vision,) which is a complementary role to Position # 4338 (Machine Learning: Deep Neural Networks Specialist.)  Since this is a complementary role, we tried to make the hiring exercise realistic, even to the point of interacting with the complementary role's hiring exercise.  Accordingly, you may wish to see the hiring exercise for the other role (https://github.com/CMIST/HiringExercise_MLCVEngineer) so you can build upon that -- there are several great solutions available for the upstream assignment and you should try and build upon an existing solution.
+
+### The Exercise
+
+Please find an existing model which can be used to recognize and annotate cats in photos.  The easiest way will be to find an existing public solution for https://github.com/CMIST/HiringExercise_MLCVEngineer (our upstream exercise.)  Of course, you are welcome to use any existing solution or even build your own from scratch.  Make sure to reference what you used as your foundation.  
+
+Your goal is to swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.
+
+Next, create a simple web-app that lets you label/annotate training images (you'll need to do the next step.)  You'll want a simple one-page app that lets you label images as "Skulls" or "Not-Skull" and for Skulls, draw+save a bounding box around the object area of interest.  Note we usually work in Python, so ideally use Django/Flask+Javascript, however you are welcome to use anything you are comfortable with, as long as it can be independently run and evaluated by us.  Dont worry about making it pretty, the page can be ugly.  You are being judged on functionality, not UI/UX/design.
+
+Re-train the same model you found to detect skulls.  Re-test the model to ensure it detects skulls and only skulls.  We'll be providing a blind test set to test your application.
+ 
+Please deliver back all scripts (and everything else referenced) as well as a corresponding set of training images you used.  Your scripts should be all-encompassing, including pipeline steps and acquisition of any training sets.  If you need a setup script, that can also be included.
+
+Your submission should be via Github.  The exercise can be done in any language (though we prefer python) as long as the submission can be successfully executed.  Please do not use paid platforms like MATLAB.  If you are completely agnostic, you can use our in-house standard: TensorFlow + Keras or Caffe2.  We plan to execute this on an AWS EC2 G-series machine.  To this point, please detail your selected environment, machine learning / computer vision platform and any other setup steps so we can re-train and re-test your model from scratch.
+
+There is no need to re-create the wheel here, use any and all open-source or vendor-provided scripts that you can.  Ensure to include them so the submission is all-encompassing.  **Do not** include anything irrelevant to the goal of this exercise, we want the minimal set of files/work which achieves the goal and nothing more.
+
+### Discussion Questions
+1.	What foundation did you use for your project?  What did you modify and what did you keep identical?
+2.	Describe your pipeline and pre-processing steps
+3.	How long did your training and inference take?
+4.	If you had more time, how would you expand on this submission?
 
 Good Luck!
 
