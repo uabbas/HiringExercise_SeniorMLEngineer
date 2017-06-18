@@ -32,15 +32,15 @@ Please find an existing model which can be used to recognize and annotate cats i
 
 Your goal is to swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.  Below are some sample positive and negative images for guidance.
 
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullA.jpg "Skull")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullB.jpg "Skull")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative2.jpg "Negative Image")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullC.jpg "Skull")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative3.jpg "Negative Image")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullD.jpg "Skull")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullE.jpg "Skull")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/negative1.jpg "Negative Image")
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/skullF.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullA.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullB.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/negative2.jpg "Negative Image")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullC.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/negative3.jpg "Negative Image")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullD.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullE.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/negative1.jpg "Negative Image")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/skullF.jpg "Skull")
 
 Next, create a simple web-app that lets you label/annotate training images (you'll need this to do the next step.)  You'll want a simple one-page app that lets you label images as "Skulls" or "Not-Skull" and for skulls, give the user/annotator a facility to draw+save a bounding box around the object area of interest.  Note we usually work in Python, so ideally use Django/Flask+Javascript, however you are welcome to use anything you are comfortable with, as long as it can be independently run and evaluated by us.  Dont worry about making it pretty, the page can be ugly.  You are being judged on functionality, not UI/UX/design.
 
