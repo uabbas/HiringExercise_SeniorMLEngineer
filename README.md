@@ -32,6 +32,13 @@ Please find an existing model which can be used to recognize and annotate cats i
 
 Your goal is to swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.
 
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullA.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullB.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullC.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullD.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullE.jpg "Skull")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLCVEngineer/master/skullF.jpg "Skull")
+
 Next, create a simple web-app that lets you label/annotate training images (you'll need this to do the next step.)  You'll want a simple one-page app that lets you label images as "Skulls" or "Not-Skull" and for skulls, give the user/annotator a facility to draw+save a bounding box around the object area of interest.  Note we usually work in Python, so ideally use Django/Flask+Javascript, however you are welcome to use anything you are comfortable with, as long as it can be independently run and evaluated by us.  Dont worry about making it pretty, the page can be ugly.  You are being judged on functionality, not UI/UX/design.
 
 Re-train the foundational project you chose (or wrote yourself) to instead detect skulls.  Re-test the model to ensure it detects skulls and only skulls.  We'll be providing a blind test set to test your application.
