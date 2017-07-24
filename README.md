@@ -20,36 +20,33 @@ This repository details item three – a take-home exercise which aims to evalua
 Without working with confidential medical images, this exercise closely resembles types of work we do in the group, specifically:
 * Find existing solutions we can build upon, try to not "re-create the wheel"
 * Dealing with heterogeneous in-the-wild samples (various sizes, various aspect ratios.)  
-* Execute object detection with 0,1,1+ cases per image
+* Execute classification and/or object detection with 0,1,1+ cases per image
 * Communicating ideas
 * Managing own efforts 
 
-This exercise is geared towards Position # 4286 (Senior Developer: Machine Learning Computer Vision,) which is a complementary role to Position # 4338 (Machine Learning: Deep Neural Networks Specialist) and Position # 4285 (Developer: Machine Learning Computer Vision.)  Since this is a complementary role, we tried to make the hiring exercise realistic, even to the point of interacting with the complementary roles' hiring exercises.  Accordingly, you may wish to see the hiring exercise for the other roles (https://github.com/CMIST/) so you can learn from or build upon those -- there are several great solutions available.
+This exercise is geared towards Position # 4286 (Senior Developer: Machine Learning Computer Vision,) which is a complementary role to Position # 4338 (Machine Learning: Deep Neural Networks Specialist) and Position # 4285 (Developer: Machine Learning Computer Vision.)  Since this is a complementary role, we tried to make the hiring exercise realistic, even to the point of interacting with the complementary roles' hiring exercises.  Accordingly, you may wish to see the hiring exercise for the other roles (https://github.com/CMIST/) so you can learn from or build upon those -- there are several great solutions available publicly on GitHub from other candidates.
 
 ### The Exercise
 
-Your goal is to create a desktop application which runs live inference on video streams looking for any object of your choice (chairs, books, cups, cats, whatever.)  The live video stream should be displayed and the object(s) detected should be noted on the application (either in logs, consoles, or directly in the UI.)  This is a really easy exercise with hundreds of available solutions when working with single images -- your task is to extend this to a video solution.  Even the video solution has a number of demonstrated apps that do this:
+Your first goal is to create a desktop application which runs live inference on video streams looking for any object of your choice (chairs, books, cups, cats, whatever.)  The live video stream should be displayed and the object(s) detected should be noted on the application (either in logs, consoles, or directly in the UI.)  This is a really easy exercise with hundreds of available solutions when working with single images -- your task is to extend this to a video solution.  Even the video solution has a number of demonstrated apps that do this:
 * https://github.com/richardstechnotes/rtndf/blob/master/Python/imageproc/imageproc.py
 * https://richardstechnotes.wordpress.com/2016/07/25/processing-video-streams-with-tensorflow-and-inception-v3/
 
-swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.  Below are some sample positive and negative images for guidance.
+The second part of the exercise will offers you a choice of one of two tasks:
+1. Increase the inference throughput of your solution above and note various things you tried and how they affected the throughput
+2. Swap in a different model, instead of using a standard trained model, use something that you trained on an object of your own choice (e.g., rosary beads.) You will want to also keep some negative and positive images.
 
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_SeniorMLEngineer/master/sample_images/sugeknight.png "Suge Knight")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_SeniorMLEngineer/master/sugeknight.png "Suge Knight")
 
-	
-Dont worry about making it pretty, the page can be ugly.  You are being judged on functionality, not UI/UX/design.
+Dont worry about making it pretty, the applicaiton can be ugly.  You are being judged on functionality and reproduceability, not UI/UX/design.  Please deliver back all scripts (and everything else referenced) as well as a corresponding set of training images you used.  Your scripts should be all-encompassing, including pipeline steps and acquisition of any training sets.  If you need a setup script, that can also be included.
 
-Re-train the foundational project you chose (or wrote yourself) to instead detect skulls.  Re-test the model to ensure it detects skulls and only skulls.  We'll be providing a blind test set to test your application.
- 
-Please deliver back all scripts (and everything else referenced) as well as a corresponding set of training images you used.  Your scripts should be all-encompassing, including pipeline steps and acquisition of any training sets.  If you need a setup script, that can also be included.
-
-Your submission should be via Github.  The exercise can be done in any language (though we prefer python) as long as the submission can be successfully executed.  Please do not use paid platforms like MATLAB.  If you are completely agnostic, you can use our in-house standard: TensorFlow + Keras or Caffe2.  We plan to execute this on an AWS EC2 G-series machine.  To this point, please detail your selected environment, machine learning / computer vision platform and any other setup steps so we can re-train and re-test your model from scratch.
+Your submission should be via Github.  The exercise should be done in Python or Java.  Please do not use paid platforms like MATLAB.  For the deep learning portion, you can use Theano, DL4J, TensorfFlow, TensorFlow + Keras or Caffe2 (our in-house standard is TensorFlow.)  To this point, please detail your selected environment, machine learning / computer vision platform and any other setup steps so we can re-train and re-test your model from scratch.
 
 There is no need to re-create the wheel here, use any and all open-source or vendor-provided scripts that you can.  Ensure to include them so the submission is all-encompassing.  **Do not** include anything irrelevant to the goal of this exercise, we want the minimal set of files/work which achieves the goal and nothing more.
 
 ### Discussion Questions
 1.	What foundation did you use for your project?  What did you modify and what did you keep identical?
-2.	Describe your processing pipeline and pre-processing steps
+2.	Describe your processing pipeline and pre-processing steps, if any
 3.	How much time did you spend on this exercise?
 4.  What shortcuts did you have to take to deliver the exercise in the short period of time allotted?
 5.	If you had more time, how would you expand on this submission?  What is your wishlist for the app?
