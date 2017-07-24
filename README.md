@@ -49,8 +49,9 @@ There is no need to re-create the wheel here, use any and all open-source or ven
 
 ### Discussion Questions
 1.	What foundation did you use for your project?  What did you modify and what did you keep identical?
-2.	Describe your pipeline and pre-processing steps
-3.	How long did your training and inference take?
-4.	If you had more time, how would you expand on this submission?
+2.	Describe your processing pipeline and pre-processing steps
+3.	How much time did you spend on this exercise?
+4.  What shortcuts did you have to take to deliver the exercise in the short period of time allotted?
+5.	If you had more time, how would you expand on this submission?  What is your wishlist for the app?
 
 Good Luck!
