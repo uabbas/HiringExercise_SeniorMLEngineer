@@ -34,8 +34,9 @@ Your goal is to create a desktop application which runs live inference on video 
 
 swap the cat detector with skulls (more relevant to the hospital) and train a skull detector.  The first step will be to gather some training images, you are welcome to use anything on the web.  You can use photos or xrays or any variation.  You will want to also keep some negative images that are not skulls.  Below are some sample positive and negative images for guidance.
 
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_MLEngineer/master/sample_images/sugeknight.png "Suge Knight")
+![](https://raw.githubusercontent.com/CMIST/HiringExercise_SeniorMLEngineer/master/sample_images/sugeknight.png "Suge Knight")
 
+	
 Dont worry about making it pretty, the page can be ugly.  You are being judged on functionality, not UI/UX/design.
 
 Re-train the foundational project you chose (or wrote yourself) to instead detect skulls.  Re-test the model to ensure it detects skulls and only skulls.  We'll be providing a blind test set to test your application.
