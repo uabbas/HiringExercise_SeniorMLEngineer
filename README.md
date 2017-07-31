@@ -36,7 +36,7 @@ The second part of the exercise will offers you a choice of one of two tasks:
 1. Increase the inference throughput of your solution above and note various things you tried and how they affected the throughput
 2. Swap in a different model, instead of using a standard trained model, use something that you trained on an object of your own choice (e.g., rosary beads.) You will want to also keep some negative and positive images.
 
-![](https://raw.githubusercontent.com/CMIST/HiringExercise_SeniorMLEngineer/master/sugeknight.png "Suge Knight")
+![](https://raw.githubusercontent.com/saifrahmed/HiringExercise_SeniorMLEngineer/master/sugeknight.png "Suge Knight")
 
 Dont worry about making it pretty, the applicaiton can be ugly.  You are being judged on functionality and reproduceability, not UI/UX/design.  Please deliver back all scripts (and everything else referenced) as well as a corresponding set of training images you used.  Your scripts should be all-encompassing, including pipeline steps and acquisition of any training sets.  If you need a setup script, that can also be included.
 
