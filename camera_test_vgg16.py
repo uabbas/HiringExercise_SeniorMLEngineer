@@ -11,6 +11,12 @@ import sys
 
 import threading
 
+#import tensorflow as tf
+#sess = tf.Session()
+
+#from keras import backend as K
+#K.set_session(sess)
+
 label = ['']
 frame = None
 
@@ -49,7 +55,14 @@ class MyThread(threading.Thread):
 		label[0] = pred[1]
 		return label
 
-cap = cv2.VideoCapture(0)
+is_webcam = True
+
+cap = None
+if (is_webcam):
+	cap = cv2.VideoCapture(0)
+else:
+	cap = cv2.VideoCapture("D:/downloads/earth.mp4")
+
 if (cap.isOpened()):
 	print("Camera OK")
 else:
@@ -60,6 +73,10 @@ keras_thread.start()
 
 while (True):
 	ret, original = cap.read()
+	if (original is None):
+		if (not is_webcam):
+			cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+			ret, original = cap.read()
 
 	frame = cv2.resize(original, (224, 224))
 #	t = MyThread()
